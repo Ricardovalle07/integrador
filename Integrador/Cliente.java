@@ -1,5 +1,5 @@
 public class Cliente {
-    private int numero; String nombre;
+    protected static int numero; static String nombre;
     public Cliente(int num, String nom){
        numero=num;
        nombre=nom;
