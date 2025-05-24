@@ -1,6 +1,6 @@
 public class Cliente {
     private int numero; String nombre;
-    public Cliente(int num, String nom, String dir, String mail, String cel){
+    public Cliente(int num, String nom){
        numero=num;
        nombre=nom;
     }
