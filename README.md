@@ -1,1 +1,2 @@
 # integrador
+Proyecto integrador, POO.
