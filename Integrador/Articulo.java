@@ -1,6 +1,7 @@
-public class Articulo {
+public class Articulo extends Cliente {
     private int codigo, existencia; String desc; double precio;
-    public Articulo(int cod, int exis, String des, double pri){
+    public Articulo(int cod, int exis, String des, double pri, int num, String nom){
+        super(num, nom);
         codigo=cod;
         existencia=exis;
         desc=des;
