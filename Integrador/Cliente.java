@@ -1,5 +1,8 @@
-public class Cliente {
-    protected static int numero; static String nombre;
+import java.io.*;
+public class Cliente implements Serializable{
+    private int numero;
+    private String nombre;
+    
     public Cliente(int num, String nom){
        numero=num;
        nombre=nom;
