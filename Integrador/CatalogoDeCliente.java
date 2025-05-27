@@ -1,13 +1,12 @@
 import java.io.*;
 import java.util.*;
-
 public class CatalogoDeCliente {
     public static void main(String[] args) throws IOException {
-        File archivoTexto = new File("clientes.txt");
-        File archivoBinario = new File("clientes.dat");
+        File filetxt = new File("clientes.txt");
+        File fileD = new File("clientes.dat");
 
-        PrintWriter salidaTexto = new PrintWriter(new FileOutputStream(archivoTexto));
-        ObjectOutputStream salidaBinario = new ObjectOutputStream(new FileOutputStream(archivoBinario));
+        PrintWriter salidaT = new PrintWriter(new FileOutputStream(filetxt));
+        ObjectOutputStream salidaD = new ObjectOutputStream(new FileOutputStream(fileD));
 
         Scanner entrada = new Scanner(System.in);
 
@@ -21,15 +20,15 @@ public class CatalogoDeCliente {
 
             Cliente cliente = new Cliente(numero, nombre);
 
-            salidaTexto.println(cliente.toString());
-            salidaBinario.writeObject(cliente.toString());
+            salidaT.println(cliente.toString());
+            salidaD.writeObject(cliente.toString());
 
             System.out.print("Numero del cliente:");
             numero = entrada.nextInt();
             entrada.nextLine();
         }
-        salidaTexto.close();
-        salidaBinario.close();
+        salidaT.close();
+        salidaD.close();
 
         System.out.println("Clientes guardados en clientes.txt y clientes.dat");
         entrada.close();

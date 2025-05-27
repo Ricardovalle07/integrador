@@ -1,1 +1,10 @@
-1	edwin
+Numero: 1 Nombre: richi
+Numero: 2 Nombre: edwin
+Numero: 3 Nombre: chui
+Numero: 4 Nombre: homero
+Numero: 5 Nombre: hamurabi
+Numero: 6 Nombre: pepe
+Numero: 7 Nombre: pablo
+Numero: 8 Nombre: luis
+Numero: 9 Nombre: oscar
+Numero: 10 Nombre: juanjo
