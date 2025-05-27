@@ -11,7 +11,7 @@ public class CatalogoDeCliente {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Numero del cliente (0 para terminar):");
+        System.out.print("Numero del cliente:");
         int numero = entrada.nextInt();
         entrada.nextLine(); 
 
@@ -21,10 +21,10 @@ public class CatalogoDeCliente {
 
             Cliente cliente = new Cliente(numero, nombre);
 
-            salidaTexto.println(cliente.getNumero() + "\t" + cliente.getNombre());
-            salidaBinario.writeObject(cliente);
+            salidaTexto.println(cliente.toString());
+            salidaBinario.writeObject(cliente.toString());
 
-            System.out.print("Numero del cliente (0 para terminar):");
+            System.out.print("Numero del cliente:");
             numero = entrada.nextInt();
             entrada.nextLine();
         }
