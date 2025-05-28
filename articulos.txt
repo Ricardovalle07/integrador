@@ -1,0 +1,6 @@
+Codigo: 1 Descripcion: cacao Precio: $45.0 Existencia: 12
+--------------------------------
+Codigo: 2 Descripcion: cereal Precio: $95.0 Existencia: 36
+--------------------------------
+Codigo: 3 Descripcion: papaya Precio: $13.0 Existencia: 89
+--------------------------------
