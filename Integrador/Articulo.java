@@ -1,11 +1,15 @@
-public class Articulo extends Cliente {
-    private int codigo, existencia; String desc; double precio;
-    public Articulo(int cod, int exis, String des, double pri, int num, String nom){
-        super(num, nom);
-        codigo=cod;
-        existencia=exis;
-        desc=des;
-        precio=pri;
+import java.io.Serializable;
+
+public class Articulo implements Serializable {
+    private int codigo, existencia;
+    private String desc;
+    private double precio;
+
+    public Articulo(int cod, int exis, String des, double pri) {
+        codigo = cod;
+        existencia = exis;
+        desc = des;
+        precio = pri;
     }
     public void setCodigo(int cod){
         codigo=cod;
