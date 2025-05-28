@@ -12,30 +12,28 @@ public class CatalogoDeArticulos {
         ObjectOutputStream salidaD= new ObjectOutputStream(fd);
 
         Articulo codigo;
-        int code, num, existencia;
-        String nom, desc;
+        int code, existencia;
+        String desc;
         double precio;
 
 
         code=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el codigo del articulo:"));     
-        codigo=new Articulo(code, 0, "", 0.0, 0, "");
+        codigo=new Articulo(code, 0, "", 0.0);
         while(code>0){
             desc=JOptionPane.showInputDialog("Ingrese la descripcion del articulo:");
             existencia=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la existencia del articulo:"));
             precio=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio del articulo:"));
-            num=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero del cliente:"));
-            nom=JOptionPane.showInputDialog("Ingrese el nombre del cliente:");
-
+        
             codigo.setCodigo(code);
             codigo.setDesc(desc);
             codigo.setExistencia(existencia);
             codigo.setPrecio(precio);
-            Articulo articulo = new Articulo(code, existencia, desc, precio, num, nom);
+            Articulo articulo = new Articulo(code, existencia, desc, precio);
             
             salidaT.println(articulo.toString());
             salidaT.println("--------------------------------");
 
-            salidaD.writeObject(articulo.toString());
+            salidaD.writeObject(articulo);
 
 
             code=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el codigo del articulo:"));
