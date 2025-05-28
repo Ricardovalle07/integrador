@@ -21,7 +21,7 @@ public class CatalogoDeCliente {
             Cliente cliente = new Cliente(numero, nombre);
 
             salidaT.println(cliente.toString());
-            salidaD.writeObject(cliente.toString());
+            salidaD.writeObject(cliente);
 
             System.out.print("Numero del cliente:");
             numero = entrada.nextInt();
