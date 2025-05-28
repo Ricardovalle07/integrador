@@ -1,12 +1,13 @@
-public class Ventas extends Cliente{
+import java.io.Serializable;
+
+public class Ventas implements Serializable {
     private int cantidad;
     private Articulo articulo; 
     private Cliente cliente;
-    public Ventas(int cant, int num, String nom, Articulo art, Cliente cli){
-        super(num, nom);
+    public Ventas(int cant, Cliente cliente, Articulo art){
         cantidad = cant;
         articulo = art;
-        cliente = cli;
+        this.cliente=cliente;
     }
     public void setCantidad(int cant){
         cantidad=cant;
